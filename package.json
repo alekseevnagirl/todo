@@ -1,0 +1,282 @@
+{
+  "name": "29887",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "axios": "^1.5.0",
+    "Babel": "^0.0.1",
+    "braces": "^3.0.2",
+    "dotenv": "^16.3.1",
+    "dotenv-webpack": "^8.0.1",
+    "element-plus": "^2.3.12",
+    "element-ui": "^2.15.14",
+    "express": "^4.18.2",
+    "glob-parent": "^6.0.2",
+    "vue": "^3.2.13",
+    "vuelidate": "^0.7.7",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-airbnb": "^6.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-vuejs-accessibility": "^1.1.0",
+    "nodemon": "^3.0.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "@vue/airbnb"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "vue/max-attributes-per-line": [
+        "error",
+        {
+          "singleline": {
+            "max": 1
+          },
+          "multiline": {
+            "max": 1
+          }
+        }
+      ],
+      "vue/html-self-closing": [
+        "error",
+        {
+          "html": {
+            "void": "never",
+            "normal": "always",
+            "component": "always"
+          },
+          "svg": "always",
+          "math": "always"
+        }
+      ],
+      "vue/html-indent": [
+        "error",
+        4,
+        {
+          "attribute": 1,
+          "baseIndent": 1,
+          "closeBracket": 0,
+          "alignAttributesVertically": true,
+          "ignores": []
+        }
+      ],
+      "vue/order-in-components": [
+        "error",
+        {
+          "order": [
+            "el",
+            "name",
+            "key",
+            "parent",
+            "functional",
+            [
+              "delimiters",
+              "comments"
+            ],
+            [
+              "components",
+              "directives",
+              "filters"
+            ],
+            "extends",
+            "mixins",
+            [
+              "provide",
+              "inject"
+            ],
+            "ROUTER_GUARDS",
+            "layout",
+            "middleware",
+            "validate",
+            "scrollToTop",
+            "transition",
+            "loading",
+            "inheritAttrs",
+            "model",
+            [
+              "props",
+              "propsData"
+            ],
+            "emits",
+            "setup",
+            "asyncData",
+            "data",
+            "fetch",
+            "head",
+            "computed",
+            "watch",
+            "watchQuery",
+            "LIFECYCLE_HOOKS",
+            "methods",
+            [
+              "template",
+              "render"
+            ],
+            "renderError"
+          ]
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "never",
+          "objects": "never",
+          "imports": "never",
+          "exports": "never",
+          "functions": "never"
+        }
+      ],
+      "vue/component-name-in-template-casing": [
+        "error",
+        "kebab-case",
+        {
+          "registeredComponentsOnly": true
+        }
+      ],
+      "linebreak-style": [
+        "error",
+        "windows"
+      ],
+      "no-console": "error",
+      "no-debugger": "error",
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "no-plusplus": "off",
+      "constructor-super": "off",
+      "no-mixed-operators": [
+        "error",
+        {
+          "groups": [
+            [
+              "+",
+              "-",
+              "*",
+              "/",
+              "%",
+              "**"
+            ],
+            [
+              "&",
+              "|",
+              "^",
+              "~",
+              "<<",
+              ">>",
+              ">>>"
+            ],
+            [
+              "==",
+              "!=",
+              "===",
+              "!==",
+              ">",
+              ">=",
+              "<",
+              "<="
+            ],
+            [
+              "&&",
+              "||"
+            ],
+            [
+              "in",
+              "instanceof"
+            ]
+          ],
+          "allowSamePrecedence": true
+        }
+      ],
+      "import/extensions": "off",
+      "import/prefer-default-export": "off",
+      "no-unused-expressions": "error",
+      "no-param-reassign": "off",
+      "prefer-destructuring": [
+        "error",
+        {
+          "array": true,
+          "object": true
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "no-bitwise": [
+        "error",
+        {
+          "allow": [
+            "~"
+          ]
+        }
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 120
+        }
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectExpression": {
+            "multiline": true,
+            "consistent": true
+          },
+          "ObjectPattern": {
+            "multiline": true,
+            "consistent": true
+          }
+        }
+      ],
+      "semi": [
+        2,
+        "always"
+      ],
+      "lines-between-class-members": [
+        "error",
+        "always",
+        {
+          "exceptAfterSingleLine": true
+        }
+      ],
+      "indent": "off",
+      "jsx-a11y/click-events-have-key-events": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
